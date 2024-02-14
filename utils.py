@@ -16,3 +16,9 @@ def generate_prompt_sql(input_question, context, output=""):
     ### Input:{input_question}
     ### Context:{context}
     ### Response:{output}"""
+
+def _extract_sections(output):
+    input_section = output.split("### Input:")[1].split("### Context:")[0]
+    context_section = output.split("### Context:")[1].split("### Response:")[0]
+    response_section = output.split("### Response:")[1]
+    return input_section, context_section, response_section
