@@ -14,7 +14,7 @@ python train.py
 ```
 
 Inference: (change the contents in main)
-'''
+```
 python infer.py
-'''
+```
 

@@ -6,4 +6,4 @@ dist/
 build/
 wandb/
 old_scripts/
-.ipynb_checkpoints/
+.ipynb_checkpoints
