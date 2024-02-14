@@ -2,6 +2,9 @@
 #model cache path
 MODEL_CACHE_PATH = '/scratch/umeleti/code/LLM/Text2SQL/MODEL_CACHE/'
 
+#Device
+device = 'cuda'
+
 #### paths
 data_path = ''
 val_set_size = 100

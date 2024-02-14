@@ -1,2 +1,8 @@
 MODEL_CACHE/
-.__pycache__/
+__pycache__/
+lora_adapters/
+final_model/
+dist/
+build/
+wandb/
+old_scripts/

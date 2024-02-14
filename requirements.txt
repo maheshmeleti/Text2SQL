@@ -23,5 +23,16 @@ typing_extensions==4.9.0
 wandb==0.15.12
 daal==2021.4.0
 intel-extension-for-pytorch
+python-dateutil
+PyYAML
+packaging
+aiohttp
+regex
+click
+appdirs
+google-api-python-client
+psutil
+threadpoolctl
+bitsandbytes
 
 
