@@ -4,34 +4,34 @@ QA Sql to text conversion, this repo consists of text to sql
 training and inference scrips for llm based text to sql conversion. Model is trained on [Meta-llama-7B](https://huggingface.co/meta-llama/Llama-2-7b) and fine tuned using [PEFT](https://huggingface.co/docs/peft/en/index). More detailes can be found the [presentation](presentation/finetuning.pptx.pdf).
 
 
-# usage:
+## usage:
 
 Train the model on hugging face sql-create-context [b-mc2](https://huggingface.co/datasets/b-mc2/sql-create-context) using [Llama-7b (NousResearch)](https://huggingface.co/NousResearch/CodeLlama-7b-hf)
 
-## Installation
+### Installation
 
 ```
 pip install -r requirements.txt
 ```
 
-## Train:
+### Train:
 ```
 python train.py
 ```
 Hyperparameters can be tuned in the script itself
 
-## Inference:
+### Inference:
 ```
 python infer.py
 ```
 
-# Some Results
+## Some Results
 
 <!-- <div align="center">
   <img width="80%" alt="Data-Prepocessing" src="images/result.png">
 </div> -->
 
-## Sample1
+### Sample1
 
 `Question: when deland is the fcsl team and 2008 is the year played who is the mlb team?
 `
@@ -48,7 +48,7 @@ python infer.py
 `FT Model: SELECT mlb_team FROM table_18373863_2 WHERE years_played = "2008" AND fcsl_team = "Deland" 
 `
 
-## Sample2
+### Sample2
 
 `Question: What is the capacity of the mine that is operated by Cyprus Amax minerals?
 `
@@ -63,6 +63,10 @@ python infer.py
 `
 
 `FT Model: SELECT MIN(capacity__thousands_of_metric_tons_) FROM table_name_83 WHERE operator = "cyprus amax minerals"`
+
+Base Model: Result from bare bones Lama-7B model
+
+FT Model: Result from Fine tuned model with dataset
 
 ## Ways to Make Better
 
